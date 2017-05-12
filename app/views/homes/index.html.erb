@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <h3>문제 1. 피카츄 찾기 (animate, remove)</h3>
+    <%= image_tag asset_path("pikachu.png"), class: "pikachu" %>
+    <div class="square"></div>
+  </div>
+
+  <div class="row">
+    <h3>문제 2. 이용약관 확인하기</h3>
+    <div class="terms">
+      <%= simple_format("멋사 계약서
+
+           1. 과제를 꼭 한다.
+           2. 예습 복습도 한다.
+           3. 쉴 때도 코딩을 한다.
+           4. 자기 전에도 코딩을 한다.
+           5. 자고 일어나서도 코딩부터 한다.
+           6. 궁금한 것이 있을 때는 질문을 한다.
+           7. 월, 목, 토 코딩데이는 반드시 참여한다.
+           8. 시험 기간에는 잠시 쉬는 시간에 코딩 공부를 한다.
+           9. 주변에 모르는 친구가 있을 때는 내가 먼저 가서 알려준다.
+           10. 위 아홉 가지 사항을 다시 한 번 읽으며 코딩 의지를 다진다.
+      ") %>
+      <%= form_tag "" do %>
+        <%= check_box_tag :check %>
+        <%= label_tag "반드시 지키겠습니다." %>
+        <a class="submit">약속</a>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <h3>문제3. 아이디/비밀번호 확인하기 (아이디:영어 / 비밀번호:숫자)</h3>
+    <div class="terms">
+      <%= form_tag "" do %>
+        <%= text_field_tag :id, "", class: "id", placeholder: "아이디" %>
+        <%= password_field_tag :password, "", class: "password", placeholder: "비밀번호" %>
+        <span class="test">확인</span>
+      <% end %>
+    </div>
+  </div>
+</div>
